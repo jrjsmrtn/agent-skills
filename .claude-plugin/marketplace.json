@@ -1,0 +1,59 @@
+{
+  "name": "agent-skills",
+  "owner": {
+    "name": "Georges Martin",
+    "email": "jrjsmrtn@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "c4-skills",
+      "description": "C4 architecture modeling and Structurizr DSL skills for creating, evolving, reviewing, and deploying software architecture models",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jrjsmrtn/c4-skills.git",
+        "sha": "8547d9929f3153a630e72624925da22b411732e8"
+      },
+      "homepage": "https://github.com/jrjsmrtn/c4-skills"
+    },
+    {
+      "name": "diataxis-skills",
+      "description": "Skills for applying the Diataxis documentation framework — audit, create, convert, and plan documentation organized around four user needs.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jrjsmrtn/diataxis-skills.git",
+        "sha": "2641825daf220606efcdf85fc9b01650546006de"
+      },
+      "homepage": "https://github.com/jrjsmrtn/diataxis-skills"
+    },
+    {
+      "name": "obsidian-skills",
+      "description": "Claude Code skill for interacting with Obsidian vaults via the Obsidian CLI",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jrjsmrtn/obsidian-skills.git",
+        "sha": "677287d96b4ad7617214c5cb724c136d584244b4"
+      },
+      "homepage": "https://github.com/jrjsmrtn/obsidian-skills"
+    },
+    {
+      "name": "oss-maintenance",
+      "description": "Actionable workflows for open-source project maintenance: triage, security response, releases, dependency health, and project sustainability.",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jrjsmrtn/oss-maintenance.git",
+        "sha": "b57a2cb8f68e3c130431cf155fac0ecf5ff93f3a"
+      },
+      "homepage": "https://github.com/jrjsmrtn/oss-maintenance"
+    },
+    {
+      "name": "project-orchestration-skills",
+      "description": "Skills for AI-assisted project orchestration following best practices for software development lifecycle, architecture documentation, and quality automation",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/jrjsmrtn/project-orchestration-skills.git",
+        "sha": "242b20aa4271261c0bb7100a7a5286586e8133ca"
+      },
+      "homepage": "https://github.com/jrjsmrtn/project-orchestration-skills"
+    }
+  ]
+}

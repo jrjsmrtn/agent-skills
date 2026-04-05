@@ -36,16 +36,6 @@
       "homepage": "https://github.com/jrjsmrtn/obsidian-skills"
     },
     {
-      "name": "oss-maintenance",
-      "description": "Actionable workflows for open-source project maintenance: triage, security response, releases, dependency health, and project sustainability.",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/jrjsmrtn/oss-maintenance.git",
-        "sha": "b57a2cb8f68e3c130431cf155fac0ecf5ff93f3a"
-      },
-      "homepage": "https://github.com/jrjsmrtn/oss-maintenance"
-    },
-    {
       "name": "project-orchestration-skills",
       "description": "Skills for AI-assisted project orchestration following best practices for software development lifecycle, architecture documentation, and quality automation",
       "source": {

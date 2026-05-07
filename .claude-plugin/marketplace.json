@@ -1,6 +1,6 @@
 {
   "name": "jrjsmrtn-skills",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "owner": {
     "name": "Georges Martin",
     "email": "jrjsmrtn@gmail.com"
@@ -12,7 +12,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/jrjsmrtn/c4-skills.git",
-        "sha": "f97ac506adac553fc99a6079ecbedbb212d28c43"
+        "sha": "c32b139b6e9125875bc588da92d2fdf683175bcc"
       },
       "homepage": "https://github.com/jrjsmrtn/c4-skills"
     },
@@ -22,7 +22,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/jrjsmrtn/diataxis-skills.git",
-        "sha": "af02189be3a355902885f102053e15144621910c"
+        "sha": "62a1492aad262824ed4695e85254356f6ee85fef"
       },
       "homepage": "https://github.com/jrjsmrtn/diataxis-skills"
     },
@@ -32,7 +32,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/jrjsmrtn/obsidian-skills.git",
-        "sha": "9a3cb02f518c10db0a830821d0f7f4854aa3a893"
+        "sha": "db5f69a6e5624d871ae0ee04542d978f64a3de0a"
       },
       "homepage": "https://github.com/jrjsmrtn/obsidian-skills"
     },
@@ -42,7 +42,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/jrjsmrtn/project-orchestration-skills.git",
-        "sha": "1e8d9f58d3fa9baa38bf3db085d8f3ba7afc6e9a"
+        "sha": "eb82782aa593b5b052ec9fb17f485ec4295af0e9"
       },
       "homepage": "https://github.com/jrjsmrtn/project-orchestration-skills"
     }

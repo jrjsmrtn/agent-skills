@@ -7,9 +7,36 @@ Personal Claude Code skills marketplace — a single install that brings in all 
 
 ## Installation
 
+### Claude Code
+
 ```
 /plugin install github:jrjsmrtn/jrjsmrtn-skills
 ```
+
+### Mistral Vibe
+
+[Mistral Vibe](https://mistral.ai/products/vibe) doesn't support marketplaces, but the plugins are valid [Agent Skills](https://agentskills.io/specification). Bridge them by cloning each plugin into `~/.vibe/claude-skills/` and symlinking individual skills into `~/.vibe/skills/` (which Vibe scans as a flat directory):
+
+```bash
+mkdir -p ~/.vibe/claude-skills ~/.vibe/skills
+
+# Clone all plugins
+for plugin in c4-skills diataxis-skills obsidian-skills project-orchestration-skills; do
+  git clone "https://github.com/jrjsmrtn/${plugin}.git" "$HOME/.vibe/claude-skills/${plugin}"
+done
+
+# Symlink each skill into Vibe's flat skills directory
+cd ~/.vibe/skills
+for plugin_dir in ~/.vibe/claude-skills/*/; do
+  plugin=$(basename "$plugin_dir")
+  for skill_dir in "$plugin_dir"skills/*/; do
+    skill=$(basename "$skill_dir")
+    ln -s "../claude-skills/${plugin}/skills/${skill}" "${skill}"
+  done
+done
+```
+
+Update later with `git -C ~/.vibe/claude-skills/<plugin> pull` — symlinks survive pulls.
 
 ## Included Plugins
 

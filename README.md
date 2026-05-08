@@ -13,30 +13,24 @@ Personal Claude Code skills marketplace — a single install that brings in all 
 /plugin install github:jrjsmrtn/jrjsmrtn-skills
 ```
 
-### Mistral Vibe
+### Other agents (Copilot CLI, Cursor, Codex, Gemini CLI, Antigravity, Goose, …)
 
-[Mistral Vibe](https://mistral.ai/products/vibe) doesn't support marketplaces, but the plugins are valid [Agent Skills](https://agentskills.io/specification). Bridge them by cloning each plugin into `~/.vibe/claude-skills/` and symlinking individual skills into `~/.vibe/skills/` (which Vibe scans as a flat directory):
+[Mistral Vibe](https://mistral.ai/products/vibe), [Copilot CLI](https://github.com/features/copilot/cli), and other agent hosts don't support Claude Code's marketplace format, but the plugins are valid [Agent Skills](https://agentskills.io/specification). Use the GitHub CLI (`gh` ≥ 2.90.0) — it auto-detects the agent host and installs into the right skills directory:
 
-```bash
-mkdir -p ~/.vibe/claude-skills ~/.vibe/skills
-
-# Clone all plugins
-for plugin in c4-skills diataxis-skills obsidian-skills project-orchestration-skills; do
-  git clone "https://github.com/jrjsmrtn/${plugin}.git" "$HOME/.vibe/claude-skills/${plugin}"
-done
-
-# Symlink each skill into Vibe's flat skills directory
-cd ~/.vibe/skills
-for plugin_dir in ~/.vibe/claude-skills/*/; do
-  plugin=$(basename "$plugin_dir")
-  for skill_dir in "$plugin_dir"skills/*/; do
-    skill=$(basename "$skill_dir")
-    ln -s "../claude-skills/${plugin}/skills/${skill}" "${skill}"
-  done
-done
+```
+gh skill install jrjsmrtn/c4-skills
+gh skill install jrjsmrtn/diataxis-skills
+gh skill install jrjsmrtn/obsidian-skills
+gh skill install jrjsmrtn/project-orchestration-skills
 ```
 
-Update later with `git -C ~/.vibe/claude-skills/<plugin> pull` — symlinks survive pulls.
+Pin a single skill or version: `gh skill install jrjsmrtn/<plugin> <skill-name>[@v<version>]`. Update later with `gh skill update --all`.
+
+For [Mistral Vibe](https://mistral.ai/products/vibe) (not yet in `gh skill`'s host detection), pass `--dir`:
+
+```
+gh skill install jrjsmrtn/<plugin> --dir ~/.vibe/skills
+```
 
 ## Included Plugins
 
